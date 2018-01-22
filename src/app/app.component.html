@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    <!-- Welcome to <span [style]= "{color: colornomClass}">{{title}}</span> ! -->
+    Welcome to <span [style.color]= "colornomClass">{{title}}</span> !
+  </h1>
+  <p>{{ getDescription() +1}} !</p>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<div>
+  <h2> {{ userObjet.name }} </h2>
+  <p> {{ userObjet.age }} </p>
+  <em>{{ userObjet | json }}</em>
+  <p>Date d'anniv : {{ userObjet.birthday }}</p>
+  <p>Date d'anniv : {{ userObjet.birthday | date: 'dd/MM/yyyy'}}</p>
+  <pre>{{ userObjet | json | uppercase }}</pre>
+</div>
+
+<button (click)="changeTitle($event)">Change title</button>
+<button (click) ="changeColor($event)">Change couleur</button>
+<!-- <button [style.color]="isSpecial ? 'red': 'blue'">Red</button> -->
+
+<input type="checkbox" name="active" ngModel required>
+<select (change)="changeValue($event)">
+  <option value="blue">Bleu</option>
+  <option value="red">Rouge</option>
+  <option value="green">Vert</option>
+</select>
+
+<p>
+  Input exo <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</p>
