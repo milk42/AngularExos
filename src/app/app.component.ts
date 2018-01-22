@@ -48,9 +48,18 @@ export class AppComponent {
      this.colornomClass = $event.target.value;
   }
 
-  textInput (event: any) {
-     this.inputValue += event.taget.value;
+  textInputChange (event: any) {
+     this.inputValue = event.target.value;
      console.log(this.inputValue);
+  }
+
+  textInputInput (event: any) {
+     console.log(event.target.value);
+     this.inputValue = event.target.value;
+  }
+
+  checkboxInput ($event) {
+    console.log($event.target.checked);
   }
 }
 
